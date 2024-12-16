@@ -1,0 +1,550 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Times New Roman', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: linear-gradient(to right, #005a32, #007a4f);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.header .logo h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.header .nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header .nav-bar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header .nav-bar ul li a {
+    color: white;
+    font-weight: bold;
+    padding: 10px 10px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.header .nav-bar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#hero {
+    height: 90vh; /* Hero section height covering 90% of the viewport */
+    background: url('https://i.ibb.co/BGFXjhT/image.png') no-repeat center center;
+    background-size: cover; /* Ensures the image covers the entire section */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 90, 50, 0.5); /* Adds a semi-transparent overlay for readability */
+    z-index: 1;
+}
+
+#hero .hero-content {
+    z-index: 2; /* Ensures text and buttons appear above the overlay */
+    max-width: 600px;
+}
+
+
+#hero h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+#hero .cta-btn {
+    padding: 15px 30px;
+    background: #ffb400;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#hero .cta-btn:hover {
+    background: #e0a400;
+}
+
+/* Mission & Vision Section */
+#mission-vision {
+    display: flex;
+    flex-direction: column; /* Align title and cards in a column layout */
+    justify-content: center; /* Centers the content vertically */
+    align-items: center; /* Centers the content horizontally */
+    text-align: center; /* Ensures the title and text align at the center */
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+}
+
+#mission-vision h2 {
+    margin-bottom: 30px; /* Add spacing below the title */
+    color: #005a32;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#mission-vision .cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures cards stack if the viewport width is too small */
+    justify-content: center; /* Centers the cards horizontally */
+}
+
+#mission-vision .card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#mission-vision .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+#mission-vision .card h3 {
+    color: #005a32;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+#mission-vision .card p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+}
+/* Academics Section */
+.academics {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    text-align: center;  /* Ensures the title and text align at the center */
+}
+
+.academics h2 {
+    margin-bottom: 30px; /* Add spacing below the title */
+    color: #005a32;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Institutes container */
+.academics .institutes-container {
+    display: flex;
+    flex-direction: row;  /* Aligns the institutes horizontally */
+    flex-wrap: wrap;  /* Allows institutes to stack if needed on smaller screens */
+    gap: 20px; /* Gap between institutes */
+    justify-content: center; /* Centers the cards horizontally */
+    padding: 20px 0; /* Add vertical padding for space between title and cards */
+}
+
+/* Institute Cards */
+.academics .institute {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the institute cards */
+.academics .institute:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.academics .institute img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.academics .institute h3 {
+    color: #005a32;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.academics .institute ul {
+    list-style: none;
+    padding: 0;
+    color: #666;
+    font-size: 16px;
+}
+
+.academics .institute ul li {
+    margin-bottom: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .academics {
+        padding: 40px 10px;
+    }
+
+    .academics .institute {
+        width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .academics h2 {
+        font-size: 28px;
+    }
+
+    .academics .institute {
+        width: 100%;  /* Full width on smaller screens */
+        margin-bottom: 30px;
+    }
+}
+
+
+/* Footer Styling */
+.footer {
+    background: linear-gradient(to right, #005a32, #007a4f);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer p {
+    color: #f4f4f4;
+    font-size: 14px;
+    opacity: 0.8;
+}
+html {
+    scroll-behavior: smooth;
+}
+.login-btn {
+    background-color: yellow;
+    color: #0b4d10; /* Make text color same as the footer color (green) */
+    padding: 15px 30px; /* Increase padding for a bigger button */
+    text-decoration: none;
+    border-radius: 8px; /* Slightly more rounded corners */
+    font-size: 1.2rem; /* Increase font size for bigger text */
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: green;
+    color: white;
+}
+/* Admission Form Section */
+.admission {
+    background-color: #fff;
+    margin: 40px auto;
+    padding: 40px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.admission-container {
+    text-align: center;
+}
+
+.admission h2 {
+    font-family: 'Times New Roman', serif; /* Times New Roman for header */
+    color: #0b4d10;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start; /* Align items to the left */
+}
+
+/* Label Styling */
+form label {
+    font-size: 1.1rem;
+    font-family: 'Times New Roman', serif; /* Times New Roman for labels */
+    color: #333;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 5px; /* Add margin to separate label from input */
+}
+
+/* Input Fields Styling */
+form input, form select {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 900px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Focused Input Styling */
+form input:focus, form select:focus {
+    border-color: #0b4d10;
+    outline: none;
+}
+
+/* Gender Selection */
+form select#gender {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 900px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Focused Gender Dropdown */
+form select#gender:focus {
+    border-color: #0b4d10;
+    outline: none;
+}
+
+/* Address Field */
+form input#address {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 900px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Focused Address Field */
+form input#address:focus {
+    border-color: #0b4d10;
+    outline: none;
+}
+
+
+/* Button Styling */
+form button {
+    background-color: #0b4d10;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 900px;
+}
+
+form button:hover {
+    background-color: #028B42;
+}
+
+
+
+/* Footer Section */
+footer {
+    background-color: #0b4d10;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .admission {
+        padding: 20px;
+        margin: 20px;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .admission h2 {
+        font-size: 1.8rem;
+    }
+
+    form label {
+        font-size: 1rem;
+    }
+
+    form input, form select, form button {
+        font-size: 1rem;
+        width: 100%;
+        max-width: none;
+    }
+
+    form .gender-group {
+        flex-direction: column; /* Stack gender options vertically on small screens */
+        gap: 10px;
+    }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .admission {
+        padding: 20px;
+        margin: 20px;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .admission h2 {
+        font-size: 1.8rem;
+    }
+
+    form label {
+        font-size: 1rem;
+    }
+
+    form input, form select, form button {
+        font-size: 1rem;
+        width: 100%;
+        max-width: none;
+    }
+}
+/* Styling for the "HOME" link */
+.home-link {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.home-link:hover {
+    background-color: #fff;
+    color: #005a32; /* Dark green text color on hover */
+    box-shadow: 0 2px 10px rgba(0, 90, 50, 0.6);
+    transform: scale(1.1); /* Slight zoom effect */
+}
+/* Modal Styles */
+.modal {
+    display: none;  /* Hidden by default */
+    position: fixed;
+    z-index: 1;  /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;  /* Enable scrolling if needed */
+    background-color: rgba(0, 0, 0, 0.4);  /* Black with transparency */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.modal-content h3 {
+    font-size: 18px;
+    color: #005a32;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    background-color: #007a4f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #005a32;
+}
+
+/* For backdrop styling */
+.modal-content button:focus {
+    outline: none;
+}
